@@ -67,6 +67,22 @@ int main()
    cout<<"marry me"<<endl;
    }
  }
+ ****
+  emphasize the '{}'
+ ****
+ #include <iostream>
+using namespace std;
+int main()   
+ {
+   int a =5, b = 10;  //means int a =5,b = 10;
+   if (a > b)         //  if(a>b)
+   if (a++ > --b)     // {
+   a+=b;
+   cout<<a<< '\t' <<b<<endl;//  if(a++ > --b)
+ }                   //   {
+                    //     a+=b;
+                    //     }
+                      // }
 
 
 

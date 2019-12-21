@@ -28,3 +28,35 @@ int main()
    }                                            //i <= 10是循环操作语句   i=1是控制变量的初值
 }                                               //步骤：初值、判断、更新
                                                 //while特点：先判断，再执行
+
+
+
+//use while 实现三次密码输入错误退出系统
+//并没有真正满足题意，自行补全
+#include <iostream>
+#include <cstdlib>      //exit头文件
+using namespace std;
+int main()
+ {
+ string password;
+ int i =0;
+ while (i < 3)
+    {
+ cout<<"please enter your password:"<< endl;
+ cin >>password;
+ cout<<"the password you enter is:"<<password<< endl;
+ i++;
+ //判断用户输入的是否正确
+ if (password!="12345678")
+  {
+    if(i==3)
+    {
+    cout<<"3次密码输入错误，强制退出系统！"<<endl;
+    exit(0);    //此处的数字是错误提示码
+    }
+  }
+
+
+ }
+
+ }

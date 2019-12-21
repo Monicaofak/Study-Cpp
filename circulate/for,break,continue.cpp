@@ -156,3 +156,25 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 break 可用于switch和循环结构中，continue 只能用于循环结构中
 break 语句终止某个循环，程序跳转到循环块外的下一个循环
 continue跳出本次循环，进入下一循环
+
+
+//calculate the sum of evens between 1-100
+#include <iostream>
+using namespace std;
+int main()
+{
+  int sum = 0;
+  for(int i=1 ; i <= 100 ; i++)
+  {
+  //跳过所有奇数情况
+  if(i % 2 == 1)
+    continue;
+  sum = sum + i;
+  }
+  cout<<"the evens between 1-100 sum="<<'\t'<<sum;
+}
+
+
+
+
+

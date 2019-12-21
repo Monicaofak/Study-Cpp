@@ -62,3 +62,97 @@ int main()     //周几打印几个\t
 }
 
 for循环 要定义循环变量，缺少条件或循环条件不更新时造成死循环
+
+**************************************************************************************************************************
+//循环输入玩家年龄，一旦输入值为负，停止输入，提示输入错误
+#include <iostream>
+using namespace std;
+int main()
+{
+    //在while、do while、for循环中遇到break都直接跳出循环
+    int age;
+    for( ; ;)   //标准的死循环或while(true)
+    {cout <<"please enter the age of your role:"<<endl;
+    cin >> age;
+    if(age < 0)
+    break;
+}
+cout<<"wrong!"<<endl;
+}
+
+
+//幸运53猜商品价格游戏根据猜的次数给予不同奖励 1：iPhonexs 2-3：小米移动电源 <5:VR眼镜
+//有Bug
+#include <iostream>
+using namespace std;
+int main()
+{
+    const double PRICE =5000;//要猜的
+    double guess;
+    int times=0;
+    //游戏实际就是一个死循环
+    for(;;){
+            //每猜一次，猜测次数加一
+        times++;
+        cout<<"please enter the price of goods"<<endl;
+        cin>>guess;
+        if(guess > PRICE)
+        {
+        cout<<"too big!"<<endl;
+        }
+        else if (guess < PRICE)
+        {
+        cout<<"too small!"<<endl;
+        }
+        else
+        {
+        cout<<"congratulations!"<<endl;
+        }
+        break;
+        }
+
+    if (times == 1)
+    {
+    cout<<"You win an iphoneXS"<<endl;
+    }
+    else if(times>=2 && times<=3)
+    {
+    cout<<"You win a 小米充电宝"<<endl;
+    }
+    else if(times>=4 && times<=5)
+    {
+    cout<<"You win  VR glasses"<<endl;
+    }
+    else
+    {
+    cout<<"You are foolish!"<<endl;
+    }
+    }
+
+
+
+//continue 跳过本次循环，继续下次循环（跳出此次，进入循环变量）
+//循环输入5个玩家的消费，统计消费额低于500的玩家数量
+#include <iostream>
+using namespace std;
+int main()
+{
+    int pcount = 0;   //count计数器
+    double con;
+    for(int i = 0; i<5 ; i++)
+    {
+    cout<<"please enter 当前 player's consumption:"<<endl;
+    cin>> con;
+    if(con >= 500)
+      continue;  //跳过500以上的情况,直接进入i++，再进入循环
+      pcount++;
+    }
+    cout<<"the counts of player that consumption below 500 :"<<pcount<<endl;
+}
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+break 可用于switch和循环结构中，continue 只能用于循环结构中
+break 语句终止某个循环，程序跳转到循环块外的下一个循环
+continue跳出本次循环，进入下一循环

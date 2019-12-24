@@ -19,7 +19,6 @@
 //int num = 1111;
 //*ptr_num = 1111; //*此处不再是指针类型，而表示取值，根据地址找到真实的空间值
 //指针可以理解为地址
-//有bug
 #include <iostream>
 using namespace std;
 int main()
@@ -32,4 +31,18 @@ int main()
     cout<<"ptr_num ahead to internal storage's value is: "<<*ptr_num<<endl;
     cout<<"ptr_num's adress is:"<<&prt_num<<endl;
     return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    char ch = 'a';
+    char * prt_ch = &ch;
+    //思考 打印地址还是 ch的值？
+    cout<< prt_ch <<'\t'<<*prt_ch<< endl;
+    //原因：char默认字符串型 打印地址也以字符串打印
+    //方法:强转
+    cout <<(void *)prt_ch<<'\t'<<*prt_ch<<endl; //void* 任意类型指针
 }

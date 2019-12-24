@@ -20,7 +20,7 @@
 //*ptr_num = 1111; //*此处不再是指针类型，而表示取值，根据地址找到真实的空间值
 //指针可以理解为地址
 //有bug
-include <iostream>
+#include <iostream>
 using namespace std;
 int main()
 {

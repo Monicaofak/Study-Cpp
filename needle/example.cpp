@@ -27,9 +27,9 @@ int main()
     double* ptr_num = &num;  //给指针赋值只能使用&符号
     cout<<"num's value is:"<<num<<endl;
     cout<<"num's address is"<<&num<<endl;
-    cout<<"ptr_num's value is:"<<prt_num<<endl;
+    cout<<"ptr_num's value is:"<<ptr_num<<endl;
     cout<<"ptr_num ahead to internal storage's value is: "<<*ptr_num<<endl;
-    cout<<"ptr_num's adress is:"<<&prt_num<<endl;
+    cout<<"ptr_num's adress is:"<<&ptr_num<<endl;
     return 0;
 }
 
@@ -39,10 +39,10 @@ using namespace std;
 int main()
 {
     char ch = 'a';
-    char * prt_ch = &ch;
+    char * ptr_ch = &ch;
     //思考 打印地址还是 ch的值？
-    cout<< prt_ch <<'\t'<<*prt_ch<< endl;
+    cout<< ptr_ch <<'\t'<<*ptr_ch<< endl;
     //原因：char默认字符串型 打印地址也以字符串打印
     //方法:强转
-    cout <<(void *)prt_ch<<'\t'<<*prt_ch<<endl; //void* 任意类型指针
+    cout <<(void *)ptr_ch<<'\t'<<*ptr_ch<<endl; //void* 任意类型指针
 }

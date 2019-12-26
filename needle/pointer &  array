@@ -11,3 +11,14 @@ int main()
     //指针就是用4个字节表示的（指针一般通过16进制的整型存放）  虽然是double型指针，但也是4字节
    cout <<ptr_score[3]<<endl;
 }
+
+//int num[50];  num是数组名，也可理解为数组的首地址
+//num 的值与&num[0]的值相同
+//数组第 i+1个元素可表示为
+  //地址：&num[i+1]或num + i + 1
+  //值：num[i+1] 或*(num + i + 1)
+  //为指向数组的指针赋值：
+  //int * ptr_num = num;或int ptr*num = &num[0];
+  //指针变量可以指向数组元素
+  //int * ptr_num = &num[4];或int * ptr_num = num + 4;
+

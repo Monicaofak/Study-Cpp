@@ -40,5 +40,76 @@ int main()
     }
  }
 
+//数组逆序
+#include <iostream>
+using namespace std;
+int main()
+ {
+    int arrays[] {15,23,30,40,50，60};
+    int * ptr_start = arrays;   //指向第一个元素
+    int * ptr_end = arrays + 5; //指向最后一个元素
+    int temp;
+    while(ptr_start <= ptr_end)
+    {
+    temp =*ptr_start;
+    *ptr_start = *ptr_end;
+    *ptr_end = temp;
+    ptr_start++;
+    ptr_end--;
+    }
+    for(int i=0;i<6;i++)
+    {
+    cout<<arrays[i]<<endl;
+    }
+ }
 
+
+
+******************************************************************************************************************************
+
+//二维数组与指针
+#include <iostream>
+using namespace std;
+int main()
+ {
+    //使用指针创建二位数组
+    //二维数组可以理解为每个元素都为一维数组的一维数组
+    int (*p2)[3] = new int[5][3] ;//二维数组的一维做成行，做成一个指针
+    p2[3][2] = 998;
+    for(int i=0;i<5;i++)
+    {
+    for(int  j=0;j<3;j++)
+    {
+    cout<<p2[i][j]<<',';
+    cout<<*(*(p2+i)+j)<<',';
+    }
+    cout<<endl;
+    }
+
+ }
+
+
+
+*********************************************************************************************************************************
+conclusion:
+//指针是一个变量，存储另一个变量（对象）的内存地址
+//int *p=....   地址通过&取地址或new的方式，不能直接赋常量
+//int num = 4;
+//int* p_num = &num; 通过&取地址给他，此处*是指针类型
+//*p_num =112；取值，num的值就变为了112
+
+//int num1 =89;
+//引用 int &num = num1; 
+//直接引用数 const int& num = 89；
+//指针支持运算（++、--）实际是变量存储地址的移动
+//double * p1-- p2++ 每次移动8个字节，移动的数量与指针类型有关
+//sizeof
+//int num[10];
+//int *p_num = num;
+//sizeof(num)    sizeof(p_num)
+//    40              4
+//二维数组 int (*p)[4] = new int[4][4];
+//            sizeof(p) 
+//                4
+//二维数组仍然是一个指针
 

@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   //array
+   //存储在一块连续的内存空间中
+   //数组名就是这块连续内存空间的首地址
+   double score[] {11,22,33,44,55};  //数组类型 double[]
+   double * ptr_score = score;
+   cout<<sizeof(score)<<'\t'<<sizeof(ptr_score) <<endl;  //数组：一个整数占8字节，5个整数 
+    //指针就是用4个字节表示的（指针一般通过16进制的整型存放）  虽然是double型指针，但也是4字节
+   cout <<ptr_score[3]<<endl;
+}

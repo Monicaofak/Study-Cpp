@@ -93,3 +93,22 @@ int main()
  return 0;
 }
 
+
+//char
+//位数：8位 bit （使用8位二进制数字表示一个char型）
+//进制：几进制就没有几 如10进制没有10
+//2进制没有2   全为0最小 全为1最大
+//那么char类型11111111 最大 00000000最小，但计算机里第一位是符号位
+//转换后-128-127
+//unsigned char 无符号字符型 第一位不是符号位 即11111111全是1，最大值为255
+//子网掩码：四个一个字节
+#include <iostream>
+using namespace std;
+int main()
+ {
+ cout<<'A'+' '<<endl;   //97小a的IISCA码
+ cout<<(char)('A'+' ')<<endl; //强制类型转换
+ return 0;
+ }
+
+

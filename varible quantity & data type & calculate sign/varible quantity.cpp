@@ -21,3 +21,19 @@ int main()
 //命名规则
 //首字母：下划线、字母   其他字母：下划线、字母、数字，不能是关键字（保留字）
 //不要使用拼音，单个英文单词，提倡使用有正式含义的英文单词
+
+
+//声明变量
+// int a;    声明变量
+//int a=3;   声明并初始化
+//int a;  a=3; 声明后初始化
+//变量名不要重复，一条语句可以声明多个相同类型的变量
+# include <iostream>
+using namespace std;
+int main()
+ {
+    int salary=2500;
+    cout<<"Xiaoming's salary is:"<<salary; //endl;输出一个换行并强制前面的缓存显示在屏幕上
+    return 0;
+ }
+

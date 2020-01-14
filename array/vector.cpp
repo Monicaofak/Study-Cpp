@@ -6,39 +6,36 @@
 //vector<string> vac2(5);  string 类型的，默认分配5个空间
 //vector<int> vec3(20,998)  给默认20个元素，每个都是998
 #include <iostream>
-#include <vector>
-#include <algorithm>  //定义sort的头文件
+#include <vector>     //vector的头文件
+#include <algorithm>   //iterator 的头文件
 using namespace std;
-main()
+int main()
  {
-     vector<double> vecDouble(98.5,67.9,43.6,32.9);
-     //向数组中插入数字
-     vecDouble.push_back(100.8);  //在数组的尾部插入一个数字
      //遍历
-     for (int i; vecDouble.size();i++)  //返回数组的大小有几个元素
-     {
-     cout << vecDouble[i] <<endl;
-     }
-
-//集合的通用遍历方法是：使用迭代器 iterator
-//以下是迭代器的基本用法
-    vector<double>::iterator it;  //要得到vector<double>类型的迭代器————实际是一个指针对象
-    //it,begin  it,endl 返回元素首位元素的迭代器
-    for(it = vecDouble.begin(); it!= vecDouble.end();++it)  //从第一个元素开始迭代
-   //++写在前，自己的内存增加，不会耗费多余的内存
-    {
-    cout<< *it<<endl;
-    }
-    //排序
-    sort(vecDouble.begin(),vecDouble.end());
-    //逆序
-    reverse(vecDouble.begin(),vecDouble.end());
-    for(it = vecDouble.begin(); it!= vecDouble.end();++it)  //从第一个元素开始迭代
-   //++写在前，自己的内存增加，不会耗费多余的内存
-    {
-    cout<< *it<<endl;
-   
-    }
+ vector<double>vecdouble{98.5,67.6,43.6,32.9};
+ vecdouble.push_back(100.8);   //在数组尾部插入一个元素
+ for(int i=0;i<vecdouble.size();i++)
+ {
+ cout<<vecdouble[i]<<endl;
+ }
+ vector<double>::iterator  it;//要得到vector<double>类型的迭代器,迭代器实际是一个指针对象
+ //从第一个元素开始迭代
+ for(it=vecdouble.begin();it!=vecdouble.end();++it)//++在后会导致缓存的增加，写在前面是自己的内存增加
+ {
+ cout<<*it<<endl;         //因为迭代器实际是一个指针对象
+ }
+ //排序
+ sort(vecdouble.begin(),vecdouble.end());
+ for(it=vecdouble.begin();it!=vecdouble.end();++it)
+ {
+ cout<<*it<<endl;
+ }
+ sort(vecdouble.begin(),vecdouble.end());
+ reverse(vecdouble.begin(),vecdouble.end());//逆序
+ for(it=vecdouble.begin();it!=vecdouble.end();++it)
+ {
+  cout<<*it<<endl;
+ }
  }
 
 *********************************************************************************************************************

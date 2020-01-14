@@ -121,7 +121,7 @@ int main()
  cout<<"the numbers of evens:"<<evencount<<endl;
 
 //3.calculate the index of enter numbers,the not fund -1
-  int Index = -1;
+  int Index;
   int input;
   cout<< "please enter a number:" <<endl;
   cin>> input;
@@ -139,7 +139,7 @@ int main()
   cout<<"the index of the input number is:"<<Index;
 }
 *****************************************************************************************************************************************
-冒泡排序
+//Bubble sort
 //有bug
 //循环输入5个整型数字，进行降序排列后输出结果
 #include <iostream>

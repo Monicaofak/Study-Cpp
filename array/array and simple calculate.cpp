@@ -165,6 +165,12 @@ int main()
         }
         }
     }
+       cout<<"after bubble sort:";
+       for(i=0;i<6;i++)
+       {
+       cout<<numa[i]<<" ";
+       }
+     return 0;
     }
     
     //选择排序

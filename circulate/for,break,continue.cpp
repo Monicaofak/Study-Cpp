@@ -167,7 +167,7 @@ int main()
   for(int i=1 ; i <= 100 ; i++)
   {
   //跳过所有奇数情况
-  if(i % 2 == 1)
+  if(i % 2 == 0)
     continue;
   sum = sum + i;
   }

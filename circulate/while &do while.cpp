@@ -42,24 +42,6 @@ int main()
  }
  }
 
-
-
-#include <iostream>
-#include <cstdlib>      //exit头文件
-using namespace std;
-int main()
- {
-     int k = 2;
-     while (k=1)   //=是赋值运算符，无线循环（死循环）
-        k=k-1;
-     cout<<k;
- }
-
-
-
-
-
-
 //使用循环实现拳皇对战
 #include <iostream>
 #include <cstdlib>      //rand头文件

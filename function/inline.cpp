@@ -27,3 +27,23 @@ int S(int num)
 {
   return num*num;
 }
+
+
+
+#include <iostream>
+#define N 5  //C中 宏定义，以后在使用N的时候都会被自动替换成5
+#define S(num) num*num  //宏定义了S(num)函数
+//以后在所有使用s(num)的地方，就自动被替换成num*num
+using namespace std;
+int main()
+ {
+ int result1 = S(5+10);  //结果出错
+ //此处运行的是5+10*5+10，所以宏定义看似强大，但无法作为一个真正的函数
+ //C++中的内联就是宏定义的升级
+ double result2=S(2.5);
+ cout<<result1<<endl;
+ cout<<result2<<endl;
+ return 0;
+ }
+
+

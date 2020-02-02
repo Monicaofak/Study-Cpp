@@ -107,7 +107,7 @@ double division(double,double);
 void print_result(double(*)(double,double),double,double);
 //有三个参数，double(*)(double,double)为函数指针，有两个参数double
 //再传两个参数给它
-//打印结果时把函数参数当做一个指针传进去
+//打印结果时把函数指针当做一个参数传进去
 
 void print_result(double(*ptrCalc)(double,double),double num1,double num2) //函数的实现
 {

@@ -43,3 +43,25 @@ int& sum(int& num1,int& num2)
  num2++;
  //没有返回值,默认返回最后一个更新的引用
  }
+
+
+//函数可以不返回值，默认返回传入的引用对象本身
+//返回引用时，要求函数参数中包含被返回的引用对象
+#include <iostream>
+using namespace std;
+int main()
+ {
+ int num=10;
+ int& result=sum(num);
+ sum(num)=55;
+ cout<<"result="<<result<<endl;
+ }
+int& sum(int& num)
+ {
+ num++;
+ return num;
+ }
+//解决的方案：将返回类型修改为const int& const int& sun(int& num){...}
+//const类型为不可修改的左值，sum(num)=55将不合法
+//省略const会使函数的含义更加模糊，建议避免在设计函数中存在模糊的情况，因为模糊会增加犯
+//犯错误的机会，应尽量避免犯错

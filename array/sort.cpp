@@ -79,7 +79,7 @@ int main()
     int min = nums[0];     //假设最小值是数组的第一个元素
     int minindex = 0;
     int m = 0;
-    for (int i = 0;i < numslength-1; i++)
+    for (int i = 0;i < numslength; i++)
     {
     min = nums[i];  //假设第i个元素是最小值
     minindex = i;

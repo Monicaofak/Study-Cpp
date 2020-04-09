@@ -1,37 +1,66 @@
 1.Bubble sort
-//有bug
-//循环输入5个整型数字，进行降序排列后输出结果
 #include <iostream>
 using namespace std;
+void BubbleSort1(int arr[],int n);
+void BubbleSort2(int arr[],int n);
+
 int main()
-{
-    //方案一：使用冒泡排序
-    //1.第一轮比较的次数为数组总长度减一  2 .下一轮比上一轮比较次数少一次
-    int nums[] = {15,25,90,23,9};
-    int j;
-    int m;    //交换的中间变量
-    //外层循环控制比较轮数
-    for (int i =0;i< 5-1; i++)
-    {   //内层循环控制每轮的比较和交换
-        for(int j = 0;j < 5-i-1; j++)
-        {
-        if(nums[j] < nums[j + 1] )
-        {
-        //交换
-        m = nums[j];
-        nums[j] = nums[j+1];
-        nums[j+1] = m;
-        }
-        }
-    }
-       cout<<"after bubble sort:";
-       for(i=0;i<6;i++)
-       {
-       cout<<numa[i]<<" ";
-       }
-     return 0;
-    }
-    
+ {
+ int a[]={12,34,46,58,24};
+ int arrsize=sizeof(a)/sizeof(a[0]);
+ BubbleSort1(a,arrsize);
+ cout<<"排序后";
+ for(int i=0;i<arrsize;i++)
+ {
+ cout<<a[i]<<" ";
+ }
+ cout<<endl;
+ BubbleSort2(a,arrsize);
+ cout<<"排序后";
+ for(int i=0;i<arrsize;i++)
+ {
+ cout<<a[i]<<" ";
+ }
+ return 0;
+ }
+ 
+void BubbleSort1(int arr[],int n) 
+//未优化的冒泡排序 
+ {
+ for(int i=0;i<n-1;i++)
+ {
+ for(int j=0;j<n-i-1;j++)
+ {
+ if(arr[j]>arr[j+1])
+ {
+ int tmp=arr[j];
+ arr[j]=arr[j+1];
+ arr[j+1]=tmp;
+  } 
+ }
+ }
+ }
+ 
+ void BubbleSort2(int arr[],int n)
+ {
+// 设置标志位用来查看是否发生交换，如果没有发生交换说明排序已经完成，不需要再进行排序
+// 这种情况发生的概率不多，这种改进需要额外保存一个变量，效果可能还不如第一种效果
+ bool flag=true;
+ for(int i=0;i<n-1 && flag;i++)
+ {
+ flag=false;
+ for(int j=0;j<n-i-1;j++)
+ {
+ if(arr[j]>arr[j+1])
+ {
+ int tmp=arr[j];
+ arr[j]=arr[j+1];
+ arr[j+1]=tmp;
+ flag=true;
+  } 
+ }
+ }
+ }
     //选择排序
 #include <iostream>
 using namespace std;

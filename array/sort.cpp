@@ -10,7 +10,7 @@ int main()
  int arrsize=sizeof(a)/sizeof(a[0]);
  BubbleSort1(a,arrsize);
  cout<<"排序后";
- for(int i=0;i<arrsize;i++)
+ for(int i=0;i<arrsize;i++)  
  {
  cout<<a[i]<<" ";
  }
@@ -27,9 +27,9 @@ int main()
 void BubbleSort1(int arr[],int n) 
 //未优化的冒泡排序 
  {
- for(int i=0;i<n-1;i++)
+ for(int i=0;i<n-1;i++) //外层循环控制比较次数
  {
- for(int j=0;j<n-i-1;j++)
+ for(int j=0;j<n-i-1;j++)//内层循环控制每次的比较
  {
  if(arr[j]>arr[j+1])
  {
